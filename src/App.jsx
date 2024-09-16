@@ -43,7 +43,7 @@ export function App() {
     <div className="app">
       <h1>My To-Do List</h1>
         <TaskInput addTask={addTask} />
-        <button onClick={removeAllTasks}><img src={garbageIcon} alt="" /></button>
+        <button className ='removeAllTasks' onClick={removeAllTasks}>Удалить все к ...м<img src={garbageIcon} alt="" /></button>
       <TaskList
         tasks={tasks}
         removeTask={removeTask}
