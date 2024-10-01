@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import './TaskInput.css';
-import addIcon from '../assets/plus.png';
 
+interface TaskInputProps {
+  addTask: (task: string) => void;
+}
 
-export function TaskInput({ addTask }) {
-  const [task, setTask] = useState('');
+export function TaskInput({ addTask }: TaskInputProps) {
+  const [task, setTask] = useState<string>('');
 
   const handleSubmit = () => {
     if (task.trim()) {
@@ -21,7 +23,7 @@ export function TaskInput({ addTask }) {
         value={task}
         onChange={(e) => setTask(e.target.value)}
       />
-      <button onClick={handleSubmit}><img src={addIcon} alt="" /></button>
+      <button onClick={handleSubmit}></button>
     </div>
   );
 }
