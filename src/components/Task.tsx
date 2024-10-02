@@ -30,15 +30,15 @@ export function Task({
             value={editingText}
             onChange={(e) => setEditingText(e.target.value)}
           />
-          <button onClick={saveEdit}></button>
-          <button onClick={cancelEdit}></button>
+          <button className='taskBtn' onClick={saveEdit}>+</button>
+          <button className='taskBtn'onClick={cancelEdit}>-</button>
         </div>
       ) : (
         <div className="view-task">
-          <span onClick={() => startEditing(task.id, task.text)}>
+          <span className='taskText' onClick={() => startEditing(task.id, task.text)}>
             {task.text}
           </span>
-          <button onClick={() => removeTask(task.id)}></button>
+          <button onClick={() => removeTask(task.id)}>Del</button>
         </div>
       )}
     </div>

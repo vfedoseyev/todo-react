@@ -23,7 +23,7 @@ export function TaskInput({ addTask }: TaskInputProps) {
         value={task}
         onChange={(e) => setTask(e.target.value)}
       />
-      <button onClick={handleSubmit}></button>
+      <button onClick={handleSubmit}>Add</button>
     </div>
   );
 }
