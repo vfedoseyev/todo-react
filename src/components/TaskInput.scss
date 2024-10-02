@@ -1,0 +1,32 @@
+@import '../styles/variables.scss';
+
+.task-input {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: row;
+
+    input {
+        width: 100%;
+        background: $task-input-background;
+        padding: $padding;
+        border: none;
+        border-bottom: $task-input-border;
+        color: $color-dark;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.63);
+        }
+    }
+}
+
+.taskBtn {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

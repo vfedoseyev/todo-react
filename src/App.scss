@@ -1,0 +1,46 @@
+@import 'styles/variables.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: $background-dark;
+  color: $color-dark;
+  margin: 0 auto;
+}
+
+.app {
+  background: $app-background;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+  padding: 25px;
+  border: 2px $border-color solid;
+  border-radius: 25px;
+}
+
+.addRemWrapper {
+  top: 25px;
+  border: 2px solid $border-color;
+  padding: $padding;
+  background: lighten($app-background, 10%);
+  position: sticky;
+  gap: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: $border-radius;
+}
+
+.removeAllTasks {
+  padding: $padding;
+}

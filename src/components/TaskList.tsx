@@ -1,14 +1,11 @@
-import './TaskList.css';
+import React from 'react';
 import { Task } from './Task';
-
-interface TaskItem {
-  id: number;
-  text: string;
-}
+import './TaskList.scss';
 
 interface TaskListProps {
-  tasks: TaskItem[];
+  tasks: { id: number; text: string; completed: boolean }[];
   removeTask: (id: number) => void;
+  toggleTaskCompletion: (id: number) => void;
   startEditing: (id: number, text: string) => void;
   editingTaskId: number | null;
   editingText: string;
@@ -20,6 +17,7 @@ interface TaskListProps {
 export function TaskList({
   tasks,
   removeTask,
+  toggleTaskCompletion,
   startEditing,
   editingTaskId,
   editingText,
@@ -29,11 +27,12 @@ export function TaskList({
 }: TaskListProps) {
   return (
     <div className="task-list">
-      {tasks.map((task: TaskItem) => (
+      {tasks.map((task) => (
         <Task
           key={task.id}
           task={task}
           removeTask={removeTask}
+          toggleTaskCompletion={toggleTaskCompletion}
           startEditing={startEditing}
           isEditing={editingTaskId === task.id}
           editingText={editingText}

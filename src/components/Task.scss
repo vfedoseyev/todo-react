@@ -1,0 +1,43 @@
+@import '../styles/variables.scss';
+
+.task-item {
+    width: 100%;
+
+    .view-task,
+    .edit-task {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .edit-description {
+        background-color: $app-background;
+        color: red;
+        font-size: 12px;
+        position: absolute;
+        top: -8px;
+        left: 5px;
+    }
+
+    .completed .taskText {
+        text-decoration: line-through;
+        color: $completed-color;
+    }
+
+    .taskText {
+        width: 100%;
+        border-bottom: 1px solid aliceblue;
+        padding: $padding;
+        text-align: justify;
+    }
+
+    .taskCheckbox {
+        width: 10px;
+    }
+}
+.completed{
+    text-decoration: line-through;
+}

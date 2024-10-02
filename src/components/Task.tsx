@@ -1,9 +1,10 @@
 import React, { useRef, useEffect } from 'react';
-import './Task.css';
+import './Task.scss';
 
 interface TaskProps {
-  task: { id: number; text: string };
+  task: { id: number; text: string; completed: boolean };
   removeTask: (id: number) => void;
+  toggleTaskCompletion: (id: number) => void;
   startEditing: (id: number, text: string) => void;
   isEditing: boolean;
   editingText: string;
@@ -15,6 +16,7 @@ interface TaskProps {
 export function Task({
   task,
   removeTask,
+  toggleTaskCompletion,
   startEditing,
   isEditing,
   editingText,
@@ -48,13 +50,19 @@ export function Task({
             type="text"
             value={editingText}
             onChange={(e) => setEditingText(e.target.value)}
-            onKeyDown={handleKeyDown} // Добавляем обработчик нажатия клавиш
+            onKeyDown={handleKeyDown}
           />
           <button className='taskBtn' onClick={saveEdit}>+</button>
           <button className='taskBtn' onClick={cancelEdit}>-</button>
         </div>
       ) : (
-        <div className="view-task">
+        <div className={`view-task ${task.completed ? 'completed' : ''}`}>
+          <input
+            className='taskCheckbox'
+            type="checkbox"
+            checked={task.completed}
+            onChange={() => toggleTaskCompletion(task.id)}
+          />
           <span className='taskText' onClick={() => startEditing(task.id, task.text)}>
             {task.text}
           </span>
