@@ -8,5 +8,16 @@
 }
 
 .taskText{
+    width: 100%;
+    border-bottom: 1px solid aliceblue;
     padding: 10px;
+    text-align: justify;
+}
+.edit-description{
+    background-color: #565655;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top: -8px;
+    left: 5px;
 }

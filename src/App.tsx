@@ -46,10 +46,12 @@ export function App(): JSX.Element {
   return (
     <div className="app">
       <h1>My To-Do List</h1>
-      <TaskInput addTask={addTask} />
-      <button className='removeAllTasks' onClick={removeAllTasks}>
-        Удалить все
-      </button>
+      <div className='addRemWrapper'>
+        <TaskInput addTask={addTask} />
+        <button className='removeAllTasks' onClick={removeAllTasks}>
+          Удалить все
+        </button>
+      </div>
       <TaskList
         tasks={tasks}
         removeTask={removeTask}

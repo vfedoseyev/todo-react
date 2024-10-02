@@ -15,6 +15,14 @@ export function TaskInput({ addTask }: TaskInputProps) {
     }
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handleSubmit();
+    } else if (e.key === 'Escape') {
+      setTask('');
+    }
+  };
+
   return (
     <div className="task-input">
       <input
@@ -22,6 +30,7 @@ export function TaskInput({ addTask }: TaskInputProps) {
         placeholder="Введите текст задачи"
         value={task}
         onChange={(e) => setTask(e.target.value)}
+        onKeyDown={handleKeyDown}
       />
       <button onClick={handleSubmit}>Add</button>
     </div>

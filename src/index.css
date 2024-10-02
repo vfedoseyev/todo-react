@@ -1,6 +1,7 @@
-*{
+* {
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Montserrat', sans-serif;
   display: flex;
@@ -13,7 +14,6 @@ body {
 
 input {
   width: 100%;
-  max-width: 500px;
   background: none;
   padding: 10px;
   border: none;
@@ -27,8 +27,7 @@ input {
 
 .app {
   background: #565655;
-  width: 500px;
-  width: 100%;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,10 +64,12 @@ input {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: flex-end;
   flex-direction: row;
 }
-.edit-task{
+
+.edit-task {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
