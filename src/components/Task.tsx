@@ -57,7 +57,7 @@ export function Task({
         </div>
       ) : (
         <div className={`view-task ${task.completed ? 'completed' : ''}`}>
-          <input
+          <input id='taskCheckbox'
             className='taskCheckbox'
             type="checkbox"
             checked={task.completed}

@@ -1,5 +1,12 @@
 @import '../styles/variables.scss';
 
+$checked-color: #34b93d;
+$unchecked-color: #000;
+$checkbox-height: 100px;
+$background-color:#667788;
+$font-color:#efefef;
+$duration: .4s;
+  
 .task-item {
     width: 100%;
 
@@ -35,9 +42,14 @@
     }
 
     .taskCheckbox {
-        width: 10px;
+        background: aquamarine;
+        width: 25px;
+        height: 25px;
     }
 }
 .completed{
     text-decoration: line-through;
 }
+
+
+

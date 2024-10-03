@@ -1,51 +1,51 @@
-// src/styles/styles.scss
-@import './variables';
+// // src/styles/styles.scss
+// @import './variables';
 
-* {
-  box-sizing: border-box;
-}
+// * {
+//   box-sizing: border-box;
+// }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
-  justify-content: center;
-  padding: 5px;
-  background-color: $dark-background; // по умолчанию темная тема
-  color: $dark-text-color;
-  margin: 0 auto;
+// body {
+//   font-family: 'Montserrat', sans-serif;
+//   display: flex;
+//   justify-content: center;
+//   padding: 5px;
+//   background-color: $dark-background; // по умолчанию темная тема
+//   color: $dark-text-color;
+//   margin: 0 auto;
 
-  &.light-theme {
-    background-color: $light-background;
-    color: $light-text-color;
-  }
-}
+//   &.light-theme {
+//     background-color: $light-background;
+//     color: $light-text-color;
+//   }
+// }
 
-.app {
-  background: $dark-background;
-  border: 2px solid $dark-border;
-  border-radius: 25px;
-  width: 90vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  gap: 25px;
-  padding: 25px;
+// .app {
+//   background: $dark-background;
+//   border: 2px solid $dark-border;
+//   border-radius: 25px;
+//   width: 90vw;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: stretch;
+//   gap: 25px;
+//   padding: 25px;
 
-  &.light-theme {
-    background: $light-background;
-    border: 2px solid $light-border;
-  }
-}
+//   &.light-theme {
+//     background: $light-background;
+//     border: 2px solid $light-border;
+//   }
+// }
 
-.task-item {
-  width: 100%;
-  background-color: inherit; // Использует фоновый цвет родителя
-  color: inherit; // Использует цвет текста родителя
+// .task-item {
+//   width: 100%;
+//   background-color: inherit; // Использует фоновый цвет родителя
+//   color: inherit; // Использует цвет текста родителя
 
-  &.light-theme {
-    // Здесь можно добавить стили для светлой темы, если нужно
-  }
-}
+//   &.light-theme {
+//     // Здесь можно добавить стили для светлой темы, если нужно
+//   }
+// }
 
-// Другие стили...
+// // Другие стили...
